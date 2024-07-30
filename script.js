@@ -1,5 +1,5 @@
 const gallery = document.getElementById('gallery');
-const assetsFolder = './assets';
+const assetsFolder = './';
 
 fetch(assetsFolder)
     .then(response => response.text())
