@@ -1,5 +1,5 @@
 const gallery = document.getElementById('gallery');
-const assetsFolder = './assets/';
+const assetsFolder = './assets';
 
 fetch(assetsFolder)
     .then(response => response.text())
@@ -10,7 +10,7 @@ fetch(assetsFolder)
 
         images.forEach(image => {
             const img = document.createElement('img');
-            img.src = assetsFolder + image.getAttribute('href');
+            img.src = image.getAttribute('href');
             gallery.appendChild(img);
         });
     })
