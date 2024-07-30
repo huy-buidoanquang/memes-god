@@ -1,17 +1,29 @@
 const gallery = document.getElementById('gallery');
 const assetsFolder = './';
 
-fetch(assetsFolder)
-    .then(response => response.text())
-    .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const images = doc.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"]');
+// fetch(assetsFolder)
+//   .then(response => response.text())
+//   .then(html => {
+//     const parser = new DOMParser();
+//     const doc = parser.parseFromString(html, 'text/html');
+//     const images = doc.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"]');
 
-        images.forEach(image => {
-            const img = document.createElement('img');
-            img.src = image.getAttribute('href');
-            gallery.appendChild(img);
-        });
-    })
-    .catch(error => console.error('Lỗi:', error));
+//     images.forEach(image => {
+//       const img = document.createElement('img');
+//       img.src = image.getAttribute('href');
+//       gallery.appendChild(img);
+//     });
+//   })
+//   .catch(error => console.error('Lỗi:', error));
+
+
+fetch('./images.json')
+  .then(response => response.json())
+  .then(images => {
+    images.forEach(image => {
+      const img = document.createElement('img');
+      img.src = image.src;
+      gallery.appendChild(img);
+    });
+  })
+  .catch(error => console.error('Lỗi khi đọc file JSON:', error));
