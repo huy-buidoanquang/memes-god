@@ -3,8 +3,25 @@ html body {
   padding: 0px;
 }
 
-.container {
+#container {
   margin: 2rem 5rem;
+}
+
+#video-container {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+#gif-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#gif-container img {
+  width: 100%;
+  height: auto;
 }
 
 #gallery {
