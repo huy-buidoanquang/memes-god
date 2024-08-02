@@ -72,6 +72,35 @@ const imageUpload = document.getElementById('imageUpload');
 const uploadMessage = document.getElementById('uploadMessage');
 
 imageUpload.addEventListener('change', () => {
-    uploadMessage.textContent = 'CHỨC NĂNG ĐỂ LÀM MÀU CHỨ MÉO HOẠT ĐỘNG ĐÂU!!!';
-    uploadMessage.style.display = 'block';
+  uploadMessage.textContent = 'CHỨC NĂNG ĐỂ LÀM MÀU CHỨ MÉO HOẠT ĐỘNG ĐÂU!!!';
+  uploadMessage.style.display = 'block';
+});
+
+
+
+// login
+
+const loginButton = document.getElementById('loginButton');
+const loginForm = document.getElementById('loginForm');
+const submitLogin = document.getElementById('submitLogin');
+const uploadContainer = document.getElementById('upload-container');
+const loginError = document.getElementById('loginError');
+uploadContainer.style.display = 'none';
+
+loginButton.addEventListener('click', () => {
+  loginButton.style.display = 'none';
+  loginForm.style.display = 'block';
+});
+
+submitLogin.addEventListener('click', () => {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  if (username === ' Tên đăng nhập' && password === ' Mật khẩu') {
+    loginForm.style.display = 'none';
+    uploadContainer.style.display = 'block';
+    loginError.style.display = 'none';
+  } else {
+    loginError.innerHTML = 'Tên đăng nhập hoặc mật khẩu không đúng!<br>Tên đăng nhập: Tên đăng nhập<br>Mật khẩu: Mật khẩu';
+    loginError.style.display = 'block';
+  }
 });

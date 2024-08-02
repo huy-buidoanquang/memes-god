@@ -68,19 +68,19 @@ html body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #gallery {
-      grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   #gallery {
-      grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   #gallery {
-      grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -110,4 +110,55 @@ html body {
 
 #tooltip.show {
   opacity: 1;
+}
+
+/* login */
+#loginButton {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#loginForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#submitLogin {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
 }

@@ -10,6 +10,14 @@
 
 <body>
   <div class="container">
+    <button id="loginButton">Đăng nhập</button>
+    <div id="loginForm" style="display: none;">
+      <h2>Đăng nhập</h2>
+      <input type="text" id="username" placeholder="Tên đăng nhập là: Tên đăng nhập">
+      <input type="password" id="password" placeholder="Mật khẩu là: Mật khẩu">
+      <div id="loginError" style="display: none; color: red;"></div> <div id="loginError" style="display: none; color: red;"></div>
+      <button id="submitLogin">Đăng nhập</button>
+    </div>
     <div id="upload-container">
       <input type="file" id="imageUpload" accept="image/*" hidden>
       <label for="imageUpload" class="custom-upload-button">Tải lên bất kỳ ảnh nào</label>
@@ -29,6 +37,7 @@
                 <source src="./assets/tui_la_thuy.mov" type="video/mp4">
             </video>
         </div> -->
+
     <div id="gif-container">
       <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
       <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
