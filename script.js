@@ -67,3 +67,11 @@ function showTooltip(event) {
   tooltip.classList.add('show');
   setTimeout(() => tooltip.classList.remove('show'), 1500);
 }
+
+const imageUpload = document.getElementById('imageUpload');
+const uploadMessage = document.getElementById('uploadMessage');
+
+imageUpload.addEventListener('change', () => {
+    uploadMessage.textContent = 'CHỨC NĂNG ĐỂ LÀM MÀU CHỨ MÉO HOẠT ĐỘNG ĐÂU!!!';
+    uploadMessage.style.display = 'block';
+});

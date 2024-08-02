@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEMES</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div id="video-container">
-            <video controls width="50%" height="auto">
-                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
-            </video>
-            <video controls width="50%" height="auto">
-                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
-            </video>
-            <video controls width="50%" height="auto">
-                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
-            </video>
-            <video controls width="50%" height="auto">
-                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
-            </video>
-        </div>
-        <div id="gif-container">
-            <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
-            <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
-        </div>
 
-        <div id="gallery"></div>
-        <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="upload-container">
+      <input type="file" id="imageUpload" accept="image/*" hidden>
+      <label for="imageUpload" class="custom-upload-button">Tải lên bất kỳ ảnh nào</label>
+      <div id="uploadMessage"></div>
     </div>
+    <!-- <div id="video-container">
+            <video controls width="50%" height="auto">
+                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
+            </video>
+            <video controls width="50%" height="auto">
+                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
+            </video>
+            <video controls width="50%" height="auto">
+                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
+            </video>
+            <video controls width="50%" height="auto">
+                <source src="./assets/tui_la_thuy.mov" type="video/mp4">
+            </video>
+        </div> -->
+    <div id="gif-container">
+      <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
+      <img src="./assets/tam_tim.gif" alt="Animated GIF" height="auto">
+    </div>
+
+    <div id="gallery"></div>
+    <script src="script.js"></script>
+  </div>
 </body>
+
 </html>

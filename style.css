@@ -7,6 +7,35 @@ html body {
   margin: 2rem 5rem;
 }
 
+#upload-container {
+  margin-bottom: 20px;
+}
+
+#uploadMessage {
+  display: none;
+  margin-top: 10px;
+  color: red;
+}
+
+.custom-upload-button {
+  width: 100%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-upload-button:hover {
+  background-color: #3e8e41;
+}
+
 #video-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
